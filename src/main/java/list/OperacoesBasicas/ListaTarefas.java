@@ -14,9 +14,20 @@ public class ListaTarefas {
         tarefaList.add(new Tarefa(descricao));
     }
 
-    public void removerTarefa(Tarefa descricao) {
-        tarefaList.removeAll(descricao);
+    public void removerTarefa(String descricao) {
+        List<Tarefa> tarefasParaRemover = new ArrayList<>();
+
+        for(Tarefa t : tarefaList){
+            if(t.getDescricao().equals(descricao)){
+                tarefasParaRemover.add(t);
+            }
+        }
+
+        tarefaList.removeAll(tarefasParaRemover);
     }
 
+    public int obterNumeroTotalTarefas() {
+        return tarefaList.size();
+    }
 
 }
