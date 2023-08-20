@@ -34,4 +34,20 @@ public class ListaTarefas {
         System.out.println(tarefaList);
     }
 
+    public static void main(String[] args) {
+        ListaTarefas listaTarefas = new ListaTarefas();
+
+        System.out.println("O numero total na lista é "+ listaTarefas.obterNumeroTotalTarefas());
+
+//        listaTarefas.adicionarTarefa("Tarefa 1");
+//        listaTarefas.adicionarTarefa("Tarefa 1");
+//        listaTarefas.adicionarTarefa("Tarefa 2");
+
+        listaTarefas.removerTarefa("Tarefa 1");
+
+        listaTarefas.obterDescricaoTarefas();
+
+        System.out.println("O numero total na lista é "+ listaTarefas.obterNumeroTotalTarefas());
+    }
+
 }
