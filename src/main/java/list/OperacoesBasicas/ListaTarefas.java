@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ListaTarefas {
 
-    private List<Tarefa> tarefaList;
+    private final List<Tarefa> tarefaList;
 
     public ListaTarefas(){
         this.tarefaList = new ArrayList<>();
@@ -28,6 +28,10 @@ public class ListaTarefas {
 
     public int obterNumeroTotalTarefas() {
         return tarefaList.size();
+    }
+
+    public void obterDescricaoTarefas(){
+        System.out.println(tarefaList);
     }
 
 }
